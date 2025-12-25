@@ -1,4 +1,10 @@
 ---
+layout: home
+title: "Private Soccer Training in Charlotte, NC | Coach Adam & Coach Luca"
+description: "One-on-one soccer training, small group sessions, and game analysis in Charlotte, NC. Improve your skills with expert coaching."
+seo:
+  keywords: "soccer training Charlotte, private soccer coach Charlotte NC, one-on-one soccer training, small group training, game analysis"
+---
 <!-- Inline CSS for Teal / White / Black Theme -->
 <style>
 body { background-color:#ffffff; color:#000000; font-family:"Helvetica Neue", Arial, sans-serif; }
@@ -22,12 +28,6 @@ section { background-color:#ffffff; color:#000000; }
 .close { color:#000000; float:right; font-size:28px; font-weight:bold; cursor:pointer; }
 .close:hover { color:#008080; }
 </style>
-layout: home
-title: "Private Soccer Training in Charlotte, NC | Coach Adam & Coach Luca"
-description: "One-on-one soccer training, small group sessions, and game analysis in Charlotte, NC. Improve your skills with expert coaching."
-seo:
-  keywords: "soccer training Charlotte, private soccer coach Charlotte NC, one-on-one soccer training, small group training, game analysis"
----
 
 <!-- Hero Section -->
 <section id="hero">
