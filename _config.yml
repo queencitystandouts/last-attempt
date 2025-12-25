@@ -41,3 +41,10 @@ markdown: kramdown
 
 plugins:
   - jekyll-remote-theme
+# Add at the end of _config.yml
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      extra_head: "<link rel='stylesheet' href='/assets/css/custom.css'>"
