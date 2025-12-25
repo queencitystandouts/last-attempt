@@ -1,8 +1,8 @@
 #Color Customization
-highlight: "#008080"   # Teal (used for buttons, links, highlights)
-white: "#ffffff"       # White background or text areas
-black: "#000000"       # Black text or navbar/footer
+highlight: "#008080"   # Teal – buttons, links, and highlights
+white: "#ffffff"       # White – background or text areas
+black: "#000000"       # Black – text, navbar, footer
 
 #Image Customization
-header-image: "../img/header-bg.jpg"
-contact-image: "../img/map-image.png"
+header-image: "/assets/img/header-bg.jpg"    # Replace with your hero/header image
+contact-image: "/assets/img/map-image.png"  # Replace with your contact/map image
