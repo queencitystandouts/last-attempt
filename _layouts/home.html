@@ -8,8 +8,10 @@
   {% if page.seo.keywords %}
   <meta name="keywords" content="{{ page.seo.keywords }}">
   {% endif %}
+
   <!-- FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     /* Teal / White / Black Theme */
     body { font-family: "Helvetica Neue", Arial, sans-serif; margin:0; color:#000; background:#fff; }
@@ -22,10 +24,19 @@
     footer a { color:#fff; }
     footer a:hover { color:#008080; }
     section { padding:60px 20px; }
+
     /* Hero */
-    #hero { background-image: url('/assets/img/header-private-soccer-training-charlotte.jpg'); background-size: cover; background-position: center; text-align:center; padding:120px 20px; }
+    #hero { 
+      background-image: url('/assets/img/header-private-soccer-training-charlotte.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+      text-align:center; 
+      padding:120px 20px; 
+      color:#fff;
+    }
     #hero h1 { color:#008080; font-size:48px; margin-bottom:20px; }
-    #hero p { color:#000; font-size:20px; margin-bottom:30px; }
+    #hero p { color:#fff; font-size:20px; margin-bottom:30px; }
+
     /* Modal */
     .modal { display:none; position:fixed; z-index:9999; padding-top:15%; left:0; top:0; width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.7); }
     .modal-content { background:#fff; margin:auto; padding:20px; border-radius:10px; width:80%; max-width:450px; text-align:center; }
@@ -33,8 +44,19 @@
     .modal-content p { color:#000; }
     .close { color:#000; float:right; font-size:28px; font-weight:bold; cursor:pointer; }
     .close:hover { color:#008080; }
+
+    /* Sections */
     .service, .coach, .timeline-event { margin-bottom:40px; }
     .service h3, .coach h3, .timeline-event h3 { color:#008080; margin-bottom:10px; }
+
+    /* Team Images */
+    .coach img { max-width:200px; border-radius:50%; margin-bottom:10px; }
+
+    /* Timeline Images */
+    .timeline-event img { max-width:100%; margin-top:10px; border-radius:5px; }
+
+    /* Social Icons */
+    .social-links a { margin:0 5px; font-size:18px; }
   </style>
 </head>
 <body>
@@ -52,7 +74,7 @@
   <p>{{ site.data.sitetext.en.services.text }}</p>
   {% for service in site.data.sitetext.en.services.list %}
     <div class="service">
-      <h3>{{ service.title }}</h3>
+      <h3><i class="{{ service.icon }}"></i> {{ service.title }}</h3>
       <p>{{ service.desc }}</p>
       <a href="https://calendly.com/your-link" target="_blank" class="btn btn-primary">Book Now</a>
     </div>
@@ -68,6 +90,11 @@
       <img src="{{ person.image }}" alt="{{ person.name }} - {{ person.role }}">
       <h3>{{ person.name }}</h3>
       <p>{{ person.role }}</p>
+      <div class="social-links">
+        {% for social in person.social %}
+          <a href="{{ social.url }}" target="_blank"><i class="{{ social.icon }}"></i></a>
+        {% endfor %}
+      </div>
     </div>
   {% endfor %}
 </section>
