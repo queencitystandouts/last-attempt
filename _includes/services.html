@@ -1,0 +1,11 @@
+<section id="services">
+  <h2>{{ site.data.sitetext.en.services.title }}</h2>
+  <p>{{ site.data.sitetext.en.services.text }}</p>
+  {% for service in site.data.sitetext.en.services.list %}
+    <div class="service">
+      <h3><i class="{{ service.icon }}"></i> {{ service.title }}</h3>
+      <p>{{ service.desc }}</p>
+      <a href="https://calendly.com/your-link" target="_blank" class="btn btn-primary">Book Now</a>
+    </div>
+  {% endfor %}
+</section>
