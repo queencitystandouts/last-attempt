@@ -4,5 +4,5 @@ white: "#ffffff"       # White – background or text areas
 black: "#000000"       # Black – text, navbar, footer
 
 #Image Customization
-header-image: "/assets/img/header-bg.jpg"    # Replace with your hero/header image
+header-image: "/assets/img/header-private-soccer-training-charlotte.jpg"    # Replace with your hero/header image
 contact-image: "/assets/img/map-image.png"  # Replace with your contact/map image
