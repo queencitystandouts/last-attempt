@@ -1,23 +1,9 @@
-# Site settings
 title: "Charlotte Private Soccer Training"
 description: "One-on-one soccer training, small group training, and game analysis in Charlotte, NC."
-url: "https://YOURUSERNAME.github.io"  # Replace with your GitHub username
-baseurl: ""  # Leave empty unless this is a project site in a subfolder
+url: "https://queencitystandouts.github.io"
+baseurl: ""  # leave empty unless project is in subfolder
 
-# Markdown parser
-markdown: kramdown
-
-# Plugins
+remote_theme: raviriley/agency-jekyll-theme
 plugins:
   - jekyll-seo-tag
-
-# Do NOT use a remote theme for now
-# remote_theme: raviriley/agency-jekyll-theme
-# theme: jekyll-theme-primer  <-- remove or comment out if present
-
-# Include directories
-include:
-  - _includes
-  - _layouts
-  - _sass
-  - assets
+markdown: kramdown
