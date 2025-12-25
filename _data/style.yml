@@ -1,5 +1,4 @@
 #Color Customization
-#Color Customization
 highlight: "#008080"   # Teal (used for buttons, links, highlights)
 white: "#ffffff"       # White background or text areas
 black: "#000000"       # Black text or navbar/footer
