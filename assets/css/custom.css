@@ -1,0 +1,26 @@
+/* Custom Color Overrides */
+:root {
+  --primary-color: #008080; /* teal */
+  --secondary-color: #000000; /* black */
+  --background-color: #ffffff; /* white */
+  --text-color: #000000; /* black */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a, .btn-primary {
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
+a:hover, .btn-primary:hover {
+  background-color: #006666 !important;
+}
+
+.navbar, footer {
+  background-color: var(--secondary-color) !important;
+  color: #ffffff !important;
+}
