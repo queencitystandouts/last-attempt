@@ -1,0 +1,16 @@
+<div id="clinicModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Join Our Free Soccer Clinic!</h2>
+    <p>Every Sunday at noon — come see what it's all about.</p>
+    <a href="https://calendly.com/your-link" target="_blank" class="btn btn-primary">Reserve Your Spot</a>
+  </div>
+</div>
+
+<script>
+var modal = document.getElementById("clinicModal");
+var span = document.getElementsByClassName("close")[0];
+window.onload = function() { modal.style.display = "block"; };
+span.onclick = function() { modal.style.display = "none"; };
+window.onclick = function(event) { if(event.target == modal){ modal.style.display = "none"; } };
+</script>
