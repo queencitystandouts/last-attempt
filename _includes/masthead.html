@@ -1,1 +1,10 @@
-
+<!-- Hero / Masthead Section -->
+<header id="hero" class="masthead" style="background-image: url('{{ site.data.style.header-image }}'); background-size: cover; background-position: center; padding: 150px 0; text-align: center; color: {{ site.data.style.white | default: '#fff' }};">
+  <div class="container">
+    <h1>{{ site.data.ui-text[site.locale].header.title }}</h1>
+    <p>{{ site.data.ui-text[site.locale].header.text }}</p>
+    <a href="{{ site.data.ui-text[site.locale].header.buttonlink }}" class="btn btn-primary">
+      {{ site.data.ui-text[site.locale].header.button }}
+    </a>
+  </div>
+</header>
