@@ -1,0 +1,16 @@
+<section id="team">
+  <h2>{{ site.data.sitetext.en.team.title }}</h2>
+  <p>{{ site.data.sitetext.en.team.text }}</p>
+  {% for person in site.data.sitetext.en.team.people %}
+    <div class="coach">
+      <img src="{{ person.image }}" alt="{{ person.name }} - {{ person.role }}">
+      <h3>{{ person.name }}</h3>
+      <p>{{ person.role }}</p>
+      <div class="social-links">
+        {% for social in person.social %}
+          <a href="{{ social.url }}" target="_blank"><i class="{{ social.icon }}"></i></a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</section>
