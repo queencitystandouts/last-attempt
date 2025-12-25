@@ -6,21 +6,28 @@ seo:
   keywords: "soccer training Charlotte, private soccer coach Charlotte NC, one-on-one soccer training, small group training, game analysis"
 ---
 
-<!-- Inline CSS for Teal / White / Black Theme -->
 <style>
-body { background-color: #ffffff !important; color: #000000 !important; font-family:"Helvetica Neue", Arial, sans-serif !important; }
-a { color: #008080 !important; text-decoration: none !important; }
-a:hover { color: #006666 !important; }
-.btn, .btn-primary, button { background-color: #008080 !important; color: #ffffff !important; padding: 10px 20px !important; border-radius: 5px !important; display: inline-block !important; text-decoration: none !important; font-weight: bold !important; }
-.btn:hover, .btn-primary:hover, button:hover { background-color: #006666 !important; color: #ffffff !important; }
-header, .navbar { background-color: #000000 !important; color: #ffffff !important; }
-header a, .navbar a { color: #ffffff !important; }
-header a:hover, .navbar a:hover { color: #008080 !important; }
-footer { background-color: #000000 !important; color: #ffffff !important; padding: 20px 0 !important; }
+/* Buttons */
+.btn-primary, .btn-primary:visited { background-color: #008080 !important; color: #ffffff !important; }
+.btn-primary:hover { background-color: #006666 !important; }
+
+/* Navbar / Header */
+.navbar, header { background-color: #000000 !important; }
+.navbar a, header a { color: #ffffff !important; }
+.navbar a:hover, header a:hover { color: #008080 !important; }
+
+/* Footer */
+footer { background-color: #000000 !important; color: #ffffff !important; }
 footer a { color: #ffffff !important; }
 footer a:hover { color: #008080 !important; }
-section, #hero, #services, #team, #timeline { background-color: #ffffff !important; color: #000000 !important; }
 
+/* Sections */
+#hero, #services, #team, #timeline { background-color: #ffffff !important; color: #000000 !important; }
+
+/* Links */
+a { color: #008080 !important; }
+a:hover { color: #006666 !important; }
+</style>
 /* Modal */
 .modal { display: none !important; position: fixed !important; z-index: 9999 !important; padding-top: 10% !important; left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; overflow: auto !important; background-color: rgba(0,0,0,0.7) !important; }
 .modal-content { background-color: #ffffff !important; margin: auto !important; padding: 20px !important; border-radius: 10px !important; width: 80% !important; max-width: 500px !important; text-align: center !important; }
