@@ -1,4 +1,27 @@
 ---
+<!-- Inline CSS for Teal / White / Black Theme -->
+<style>
+body { background-color:#ffffff; color:#000000; font-family:"Helvetica Neue", Arial, sans-serif; }
+a { color:#008080; text-decoration:none; }
+a:hover { color:#006666; }
+.btn, .btn-primary { background-color:#008080; color:#ffffff; padding:10px 20px; border-radius:5px; display:inline-block; text-decoration:none; font-weight:bold; }
+.btn:hover, .btn-primary:hover { background-color:#006666; color:#ffffff; }
+header, .navbar { background-color:#000000; color:#ffffff; }
+header a, .navbar a { color:#ffffff; }
+header a:hover, .navbar a:hover { color:#008080; }
+footer { background-color:#000000; color:#ffffff; padding:20px 0; }
+footer a { color:#ffffff; }
+footer a:hover { color:#008080; }
+section { background-color:#ffffff; color:#000000; }
+
+/* Modal */
+.modal { display:none; position:fixed; z-index:9999; padding-top:10%; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.7); }
+.modal-content { background-color:#ffffff; margin:auto; padding:20px; border-radius:10px; width:80%; max-width:500px; text-align:center; }
+.modal-content h2 { color:#008080; }
+.modal-content p { color:#000000; }
+.close { color:#000000; float:right; font-size:28px; font-weight:bold; cursor:pointer; }
+.close:hover { color:#008080; }
+</style>
 layout: home
 title: "Private Soccer Training in Charlotte, NC | Coach Adam & Coach Luca"
 description: "One-on-one soccer training, small group sessions, and game analysis in Charlotte, NC. Improve your skills with expert coaching."
