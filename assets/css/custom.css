@@ -1,26 +1,113 @@
-/* Custom Color Overrides */
-:root {
-  --primary-color: #008080; /* teal */
-  --secondary-color: #000000; /* black */
-  --background-color: #ffffff; /* white */
-  --text-color: #000000; /* black */
-}
+/* ===== Teal / White / Black Theme ===== */
 
+/* Body & Text */
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: #ffffff; /* white background */
+  color: #000000; /* black text */
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-a, .btn-primary {
-  background-color: var(--primary-color) !important;
-  color: #ffffff !important;
+/* Links */
+a {
+  color: #008080; /* teal links */
+  text-decoration: none;
 }
 
-a:hover, .btn-primary:hover {
-  background-color: #006666 !important;
+a:hover {
+  color: #006666; /* darker teal hover */
 }
 
-.navbar, footer {
-  background-color: var(--secondary-color) !important;
-  color: #ffffff !important;
+/* Buttons */
+.btn, .btn-primary {
+  background-color: #008080; /* teal buttons */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn:hover, .btn-primary:hover {
+  background-color: #006666; /* darker teal hover */
+  color: #ffffff;
+}
+
+/* Header / Navbar */
+header, .navbar {
+  background-color: #000000; /* black header/navbar */
+  color: #ffffff;
+}
+
+header a, .navbar a {
+  color: #ffffff;
+}
+
+header a:hover, .navbar a:hover {
+  color: #008080; /* teal hover */
+}
+
+/* Footer */
+footer {
+  background-color: #000000; /* black footer */
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #008080; /* teal hover */
+}
+
+/* Services / Sections */
+section {
+  background-color: #ffffff; /* white background */
+  color: #000000;
+}
+
+/* Popup Modal */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 9999; 
+  padding-top: 10%; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7); /* semi-transparent black overlay */
+}
+
+.modal-content {
+  background-color: #ffffff; /* white popup */
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  color: #008080; /* teal heading */
+}
+
+.modal-content p {
+  color: #000000; /* black text */
+}
+
+.close {
+  color: #000000; /* black close button */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #008080; /* teal hover */
 }
