@@ -8,109 +8,107 @@ seo:
 
 <!-- Inline CSS for Teal / White / Black Theme -->
 <style>
+body { font-family: "Helvetica Neue", Arial, sans-serif; color:#000000; background-color:#ffffff; }
+
 /* Buttons */
-.btn-primary, .btn-primary:visited { background-color: #008080 !important; color: #ffffff !important; }
-.btn-primary:hover { background-color: #006666 !important; }
+.btn, .btn-primary { background-color: #008080; color: #ffffff; padding: 10px 20px; border-radius: 5px; font-weight:bold; text-decoration:none; display:inline-block; }
+.btn:hover, .btn-primary:hover { background-color: #006666; color:#ffffff; }
 
 /* Navbar / Header */
-.navbar, header { background-color: #000000 !important; }
-.navbar a, header a { color: #ffffff !important; }
-.navbar a:hover, header a:hover { color: #008080 !important; }
+header, .navbar { background-color:#000000; }
+header a, .navbar a { color:#ffffff; }
+header a:hover, .navbar a:hover { color:#008080; }
 
 /* Footer */
-footer { background-color: #000000 !important; color: #ffffff !important; }
-footer a { color: #ffffff !important; }
-footer a:hover { color: #008080 !important; }
+footer { background-color:#000000; color:#ffffff; padding: 20px 0; }
+footer a { color:#ffffff; }
+footer a:hover { color:#008080; }
 
 /* Sections */
-#hero, #services, #team, #timeline { background-color: #ffffff !important; color: #000000 !important; }
+section { background-color:#ffffff; color:#000000; padding: 60px 20px; }
 
-/* Links */
-a { color: #008080 !important; }
-a:hover { color: #006666 !important; }
+/* Hero */
+#hero h1 { color:#008080; font-size: 48px; margin-bottom: 20px; }
+#hero p { color:#000000; font-size: 20px; margin-bottom: 30px; }
+
+/* Popup Modal */
+.modal { display:none; position:fixed; z-index:9999; padding-top:15%; left:0; top:0; width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.7); }
+.modal-content { background-color:#ffffff; margin:auto; padding:20px; border-radius:10px; width:80%; max-width:450px; text-align:center; }
+.modal-content h2 { color:#008080; }
+.modal-content p { color:#000000; }
+.close { color:#000000; float:right; font-size:28px; font-weight:bold; cursor:pointer; }
+.close:hover { color:#008080; }
 </style>
 
-<!-- Hero Section -->
-<section id="hero">
-  <h1>Charlotte Private Soccer Training</h1>
-  <p>Improve your skills, game intelligence, and athleticism with Coach Adam and Coach Luca</p>
-  <a href="#services" class="btn btn-primary">View Our Services</a>
+<!-- Hero Section (Inline to guarantee display) -->
+<section id="hero" style="background-image: url('/assets/img/header-private-soccer-training-charlotte.jpg'); background-size: cover; background-position: center; text-align:center; padding: 120px 20px;">
+  <h1>{{ site.data.sitetext.en.header.title }}</h1>
+  <p>{{ site.data.sitetext.en.header.text }}</p>
+  <a href="{{ site.data.sitetext.en.header.buttonlink }}" class="btn btn-primary">{{ site.data.sitetext.en.header.button }}</a>
 </section>
 
 <!-- Services Section -->
 <section id="services">
-  <h2>Soccer Training Services</h2>
-  <p>One-on-one training, small group sessions, and game analysis to help players of all ages and levels improve.</p>
+  <h2>{{ site.data.sitetext.en.services.title }}</h2>
+  <p>{{ site.data.sitetext.en.services.text }}</p>
 
+  {% for service in site.data.sitetext.en.services.list %}
   <div class="service">
-    <h3>One-on-One Private Training</h3>
-    <p>Personalized coaching focusing on technical skills, speed, agility, and tactical understanding for individual players in Charlotte, NC.</p>
+    <h3>{{ service.title }}</h3>
+    <p>{{ service.desc }}</p>
     <a href="https://calendly.com/your-link" target="_blank" class="btn btn-primary">Book Now</a>
   </div>
-
-  <div class="service">
-    <h3>Small Group Training</h3>
-    <p>Small group sessions emphasizing teamwork, tactical awareness, and competitive play in a supportive environment.</p>
-    <a href="https://calendly.com/your-link" target="_blank" class="btn btn-primary">Book Now</a>
-  </div>
-
-  <div class="service">
-    <h3>Game Analysis</h3>
-    <p>Video and on-field analysis to identify strengths and areas for improvement, helping players make smarter decisions during matches.</p>
-    <a href="https://calendly.com/your-link" target="_blank" class="btn btn-primary">Book Now</a>
-  </div>
+  {% endfor %}
 </section>
 
 <!-- Coaches Section -->
 <section id="team">
-  <h2>Meet Our Coaches</h2>
-  <p>Expert coaching to help you reach your full potential</p>
+  <h2>{{ site.data.sitetext.en.team.title }}</h2>
+  <p>{{ site.data.sitetext.en.team.text }}</p>
 
+  {% for person in site.data.sitetext.en.team.people %}
   <div class="coach">
-    <img src="/assets/img/team/coach-adam.jpg" alt="Coach Adam founder Charlotte soccer training">
-    <h3>Coach Adam</h3>
-    <p>Founder & Lead Coach. Expert in youth development and skill building for players in Charlotte, NC.</p>
+    <img src="{{ person.image }}" alt="{{ person.name }} - {{ person.role }}">
+    <h3>{{ person.name }}</h3>
+    <p>{{ person.role }}</p>
   </div>
-
-  <div class="coach">
-    <img src="/assets/img/team/coach-luca.jpg" alt="Coach Luca head coach Charlotte soccer training">
-    <h3>Coach Luca</h3>
-    <p>Head Coach. Specializes in tactical analysis and advanced training techniques for elite soccer players.</p>
-  </div>
+  {% endfor %}
 </section>
 
 <!-- Timeline / Story Section -->
 <section id="timeline">
-  <h2>Our Journey</h2>
-  <p>How Charlotte Soccer Training was built to develop elite players</p>
+  <h2>{{ site.data.sitetext.en.timeline.title }}</h2>
+  <p>{{ site.data.sitetext.en.timeline.text }}</p>
 
+  {% for event in site.data.sitetext.en.timeline.events %}
   <div class="timeline-event">
-    <h3>Founded by Coach Adam</h3>
-    <span>2015</span>
-    <p>Coach Adam started private soccer training sessions in Charlotte, NC with a focus on individual skill development.</p>
-    <img src="/assets/img/timeline/founding.jpg" alt="Coach Adam founding Charlotte Soccer Training">
+    <h3>{{ event.title }}</h3>
+    <span>{{ event.year }}</span>
+    <p>{{ event.desc }}</p>
+    <img src="{{ event.image }}" alt="{{ event.alt }}">
   </div>
+  {% endfor %}
+</section>
 
-  <div class="timeline-event">
-    <h3>Coach Luca Joins</h3>
-    <span>2018</span>
-    <p>Coach Luca joined as Head Coach, bringing advanced game analysis and tactical expertise to our programs.</p>
-    <img src="/assets/img/timeline/coach-luca.jpg" alt="Coach Luca head coach">
-  </div>
+<!-- About Section -->
+<section id="about">
+  <h2>{{ site.data.sitetext.en.about.title }}</h2>
+  <p>{{ site.data.sitetext.en.about.text }}</p>
+  <div>{{ site.data.sitetext.en.about.body | markdownify }}</div>
 </section>
 
 <!-- Popup Modal -->
-<div id="promoModal" class="modal">
+<div id="clinicModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <h2>Book Your First Session!</h2>
-    <p>Get 10% off your first one-on-one training session with Coach Adam or Coach Luca.</p>
-    <a href="https://calendly.com/your-link" target="_blank" class="btn btn-primary">Book Now</a>
+    <h2>Join Our Free Soccer Clinic!</h2>
+    <p>Every Sunday at noon — come see what it's all about.</p>
+    <a href="https://calendly.com/your-link" target="_blank" class="btn btn-primary">Reserve Your Spot</a>
   </div>
 </div>
 
 <script>
-var modal = document.getElementById("promoModal");
+var modal = document.getElementById("clinicModal");
 var span = document.getElementsByClassName("close")[0];
 window.onload = function() { modal.style.display = "block"; };
 span.onclick = function() { modal.style.display = "none"; };
